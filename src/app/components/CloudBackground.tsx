@@ -8,7 +8,7 @@ export default function CloudBackground() {
     <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
       {/* Large clouds */}
       <motion.div
-        className="absolute top-20 left-0 text-white/30"
+        className="absolute top-[10%] left-0 text-white/30"
         animate={{
           x: ['0%', '100%', '0%'],
           y: ['0%', '-10%', '0%'],
@@ -30,7 +30,7 @@ export default function CloudBackground() {
       </motion.div>
 
       <motion.div
-        className="absolute top-40 right-0 text-white/30"
+        className="absolute top-[20%] right-0 text-white/30"
         animate={{
           x: ['0%', '-100%', '0%'],
           y: ['0%', '-15%', '0%'],
@@ -53,7 +53,7 @@ export default function CloudBackground() {
 
       {/* Medium clouds */}
       <motion.div
-        className="absolute top-60 left-1/4 text-white/30"
+        className="absolute top-[40%] left-[10%] text-white/30"
         animate={{
           x: ['0%', '100%', '0%'],
           y: ['0%', '-8%', '0%'],
@@ -75,7 +75,7 @@ export default function CloudBackground() {
       </motion.div>
 
       <motion.div
-        className="absolute top-80 right-1/4 text-white/30"
+        className="absolute top-[60%] right-[10%] text-white/30"
         animate={{
           x: ['0%', '-100%', '0%'],
           y: ['0%', '-12%', '0%'],
@@ -98,7 +98,7 @@ export default function CloudBackground() {
 
       {/* Small clouds */}
       <motion.div
-        className="absolute top-40 left-1/2 text-white/30"
+        className="absolute top-[30%] left-[30%] text-white/30"
         animate={{
           x: ['0%', '100%', '0%'],
           y: ['0%', '-5%', '0%'],
@@ -120,7 +120,7 @@ export default function CloudBackground() {
       </motion.div>
 
       <motion.div
-        className="absolute top-70 right-1/2 text-white/30"
+        className="absolute top-[70%] right-[30%] text-white/30"
         animate={{
           x: ['0%', '-100%', '0%'],
           y: ['0%', '-10%', '0%'],
@@ -139,6 +139,96 @@ export default function CloudBackground() {
         }}
       >
         <FaCloud size={60} />
+      </motion.div>
+
+      {/* Additional clouds for better coverage */}
+      <motion.div
+        className="absolute top-[80%] left-[20%] text-white/30"
+        animate={{
+          x: ['0%', '100%', '0%'],
+          y: ['0%', '-7%', '0%'],
+        }}
+        transition={{
+          x: {
+            duration: 16,
+            repeat: Infinity,
+            ease: "linear"
+          },
+          y: {
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }
+        }}
+      >
+        <FaCloud size={90} />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-[90%] right-[20%] text-white/30"
+        animate={{
+          x: ['0%', '-100%', '0%'],
+          y: ['0%', '-9%', '0%'],
+        }}
+        transition={{
+          x: {
+            duration: 22,
+            repeat: Infinity,
+            ease: "linear"
+          },
+          y: {
+            duration: 7,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }
+        }}
+      >
+        <FaCloud size={70} />
+      </motion.div>
+
+      {/* Mobile-specific clouds */}
+      <motion.div
+        className="absolute top-[50%] left-[50%] text-white/30 md:hidden"
+        animate={{
+          x: ['0%', '100%', '0%'],
+          y: ['0%', '-6%', '0%'],
+        }}
+        transition={{
+          x: {
+            duration: 14,
+            repeat: Infinity,
+            ease: "linear"
+          },
+          y: {
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }
+        }}
+      >
+        <FaCloud size={50} />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-[85%] left-[70%] text-white/30 md:hidden"
+        animate={{
+          x: ['0%', '-100%', '0%'],
+          y: ['0%', '-8%', '0%'],
+        }}
+        transition={{
+          x: {
+            duration: 16,
+            repeat: Infinity,
+            ease: "linear"
+          },
+          y: {
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }
+        }}
+      >
+        <FaCloud size={40} />
       </motion.div>
     </div>
   );
